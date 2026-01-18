@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2026-01-17T16:50:18.525704",
+    "last_updated": "2026-01-17T18:44:53.996450",
     "source": "EMPLOYEE_REFERENCE.md"
   },
   "employees": [
@@ -13,7 +13,14 @@
       "manager_id": null,
       "level": "executive",
       "employment_type": "w2",
-      "status": "active"
+      "status": "active",
+      "email": "kevin.reilly@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_luke_peterson",
@@ -23,7 +30,14 @@
       "manager_id": null,
       "level": "executive",
       "employment_type": "w2",
-      "status": "active"
+      "status": "active",
+      "email": "luke.peterson@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_ben_kusin",
@@ -33,7 +47,14 @@
       "manager_id": "person_kevin_reilly",
       "level": "department_head",
       "employment_type": "w2",
-      "status": "active"
+      "status": "active",
+      "email": "ben.kusin@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_wayan_palmieri",
@@ -43,7 +64,14 @@
       "manager_id": "person_luke_peterson",
       "level": "department_head",
       "employment_type": "contractor",
-      "status": "active"
+      "status": "active",
+      "email": "wayan.palmieri@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_fill_isgro",
@@ -53,7 +81,14 @@
       "manager_id": "person_luke_peterson",
       "level": "department_head",
       "employment_type": "w2",
-      "status": "active"
+      "status": "active",
+      "email": "fill.isgro@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_daniel_kalotov",
@@ -63,7 +98,14 @@
       "manager_id": "person_luke_peterson",
       "level": "department_head",
       "employment_type": "w2",
-      "status": "active"
+      "status": "active",
+      "email": "daniel.kalotov@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_niels_hoffmann",
@@ -73,7 +115,14 @@
       "manager_id": "person_luke_peterson",
       "level": "department_head",
       "employment_type": "international",
-      "status": "active"
+      "status": "active",
+      "email": "niels.hoffmann@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_emmet_reilly",
@@ -83,7 +132,14 @@
       "manager_id": "person_ben_kusin",
       "level": "manager",
       "employment_type": "w2",
-      "status": "active"
+      "status": "active",
+      "email": "emmet.reilly@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_veronica_diaz",
@@ -93,7 +149,14 @@
       "manager_id": "person_wayan_palmieri",
       "level": "manager",
       "employment_type": "trial",
-      "status": "trial"
+      "status": "trial",
+      "email": "veronica.diaz@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_estefania_guarderas",
@@ -103,7 +166,14 @@
       "manager_id": "person_wayan_palmieri",
       "level": "ic",
       "employment_type": "w2",
-      "status": "active"
+      "status": "active",
+      "email": "estefania.guarderas@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_jason_goldwatch",
@@ -113,7 +183,14 @@
       "manager_id": "person_wayan_palmieri",
       "level": "manager",
       "employment_type": "contractor",
-      "status": "active"
+      "status": "active",
+      "email": "jason.goldwatch@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_noah_shields",
@@ -123,7 +200,14 @@
       "manager_id": "person_veronica_diaz",
       "level": "ic",
       "employment_type": "w2",
-      "status": "active"
+      "status": "active",
+      "email": "noah.shields@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_brandon_valedez",
@@ -133,7 +217,14 @@
       "manager_id": "person_fill_isgro",
       "level": "ic",
       "employment_type": "trial",
-      "status": "trial"
+      "status": "trial",
+      "email": "brandon.valedez@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_sean_geisterfer",
@@ -143,7 +234,14 @@
       "manager_id": "person_fill_isgro",
       "level": "ic",
       "employment_type": "trial",
-      "status": "trial"
+      "status": "trial",
+      "email": "sean.geisterfer@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_trent_hunter",
@@ -153,7 +251,14 @@
       "manager_id": "person_fill_isgro",
       "level": "ic",
       "employment_type": "trial",
-      "status": "trial"
+      "status": "trial",
+      "email": "trent.hunter@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_elliot_quartz",
@@ -163,7 +268,14 @@
       "manager_id": "person_fill_isgro",
       "level": "ic",
       "employment_type": "trial",
-      "status": "trial"
+      "status": "trial",
+      "email": "elliot.quartz@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_marc_donhue",
@@ -173,7 +285,14 @@
       "manager_id": "person_fill_isgro",
       "level": "ic",
       "employment_type": "trial",
-      "status": "trial"
+      "status": "trial",
+      "email": "marc.donhue@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_ahmed_yakout",
@@ -183,7 +302,14 @@
       "manager_id": "person_fill_isgro",
       "level": "ic",
       "employment_type": "trial",
-      "status": "trial"
+      "status": "trial",
+      "email": "ahmed.yakout@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_matthias_thoemmes",
@@ -193,7 +319,14 @@
       "manager_id": "person_niels_hoffmann",
       "level": "ic",
       "employment_type": "international",
-      "status": "active"
+      "status": "active",
+      "email": "matthias.thoemmes@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_lukas_motiejunas",
@@ -203,7 +336,14 @@
       "manager_id": "person_niels_hoffmann",
       "level": "ic",
       "employment_type": "international",
-      "status": "active"
+      "status": "active",
+      "email": "lukas.motiejunas@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_zac_bagley",
@@ -213,7 +353,14 @@
       "manager_id": "person_niels_hoffmann",
       "level": "ic",
       "employment_type": "trial",
-      "status": "trial"
+      "status": "trial",
+      "email": "zac.bagley@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     },
     {
       "id": "person_jerry_bellman",
@@ -223,7 +370,14 @@
       "manager_id": "person_kevin_reilly",
       "level": "executive",
       "employment_type": "trial",
-      "status": "trial"
+      "status": "trial",
+      "email": "jerry.bellman@kartelai.com",
+      "onboarding_status": "not_started",
+      "onboarding_started_at": null,
+      "onboarding_completed_at": null,
+      "last_login": null,
+      "timezone": "America/New_York",
+      "notification_enabled": true
     }
   ]
 }

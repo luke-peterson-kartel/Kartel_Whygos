@@ -113,6 +113,17 @@ class Person:
     employment_type: Literal['w2', 'contractor', 'international', 'trial'] = 'w2'
     status: Literal['active', 'trial', 'searching'] = 'active'
 
+    # NEW FIELDS - Authentication & Onboarding
+    email: Optional[str] = None
+    onboarding_status: Literal['not_started', 'in_progress', 'completed'] = 'not_started'
+    onboarding_started_at: Optional[str] = None
+    onboarding_completed_at: Optional[str] = None
+    last_login: Optional[str] = None
+
+    # NEW FIELDS - User preferences
+    timezone: str = "America/New_York"
+    notification_enabled: bool = True
+
 
 @dataclass
 class Department:
@@ -190,7 +201,14 @@ def person_to_dict(person: Person) -> dict:
         "manager_id": person.manager_id,
         "level": person.level,
         "employment_type": person.employment_type,
-        "status": person.status
+        "status": person.status,
+        "email": person.email,
+        "onboarding_status": person.onboarding_status,
+        "onboarding_started_at": person.onboarding_started_at,
+        "onboarding_completed_at": person.onboarding_completed_at,
+        "last_login": person.last_login,
+        "timezone": person.timezone,
+        "notification_enabled": person.notification_enabled
     }
 
 

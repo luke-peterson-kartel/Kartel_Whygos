@@ -12,7 +12,9 @@ from ..models.whygo import (
     DepartmentWhyGO,
     IndividualWhyGO,
     Outcome,
-    ProgressUpdate
+    ProgressUpdate,
+    Person,
+    Department
 )
 
 
@@ -62,6 +64,59 @@ class IWhygoRepository(ABC):
     @abstractmethod
     def save_all(self) -> bool:
         """Persist all changes to storage backend"""
+        pass
+
+    # Person/User methods
+    @abstractmethod
+    def get_person(self, person_id: str) -> Optional[Person]:
+        """Get a person by ID"""
+        pass
+
+    @abstractmethod
+    def get_person_by_email(self, email: str) -> Optional[Person]:
+        """Get a person by email address"""
+        pass
+
+    @abstractmethod
+    def get_all_people(self) -> List[Person]:
+        """Get all people/employees"""
+        pass
+
+    @abstractmethod
+    def get_people_by_department(self, dept_id: str) -> List[Person]:
+        """Get all people in a specific department"""
+        pass
+
+    @abstractmethod
+    def update_person(self, person: Person) -> bool:
+        """Update a person's information"""
+        pass
+
+    # Department methods
+    @abstractmethod
+    def get_department(self, dept_id: str) -> Optional[Department]:
+        """Get a department by ID"""
+        pass
+
+    @abstractmethod
+    def get_all_departments(self) -> List[Department]:
+        """Get all departments"""
+        pass
+
+    # Goal creation/update methods
+    @abstractmethod
+    def create_individual_goal(self, goal: IndividualWhyGO) -> bool:
+        """Create a new individual goal"""
+        pass
+
+    @abstractmethod
+    def update_individual_goal(self, goal: IndividualWhyGO) -> bool:
+        """Update an existing individual goal"""
+        pass
+
+    @abstractmethod
+    def get_goals_by_status(self, status: str) -> dict:
+        """Get goals filtered by status (returns dict with company, department, individual)"""
         pass
 
 

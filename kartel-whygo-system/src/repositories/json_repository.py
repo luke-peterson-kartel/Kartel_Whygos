@@ -16,8 +16,12 @@ from ..models.whygo import (
     IndividualWhyGO,
     Outcome,
     ProgressUpdate,
+    Person,
+    Department,
     whygo_to_dict,
-    progress_update_to_dict
+    progress_update_to_dict,
+    person_to_dict,
+    department_to_dict
 )
 
 
@@ -26,9 +30,60 @@ class JsonWhygoRepository(IWhygoRepository):
 
     def __init__(self, data_dir: str = "data/"):
         self.data_dir = Path(data_dir)
+        self._people = self._load_people()
+        self._departments = self._load_departments()
         self._company_goals = self._load_company_goals()
         self._department_goals = self._load_department_goals()
         self._individual_goals = self._load_individual_goals()
+
+    def _load_people(self) -> dict:
+        """Load people/employees from JSON"""
+        file_path = self.data_dir / "employees.json"
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+
+        people = {}
+        for person_data in data.get("employees", []):
+            person = Person(
+                id=person_data["id"],
+                name=person_data["name"],
+                title=person_data["title"],
+                department_id=person_data["department_id"],
+                manager_id=person_data.get("manager_id"),
+                level=person_data["level"],
+                employment_type=person_data.get("employment_type", "w2"),
+                status=person_data.get("status", "active"),
+                email=person_data.get("email"),
+                onboarding_status=person_data.get("onboarding_status", "not_started"),
+                onboarding_started_at=person_data.get("onboarding_started_at"),
+                onboarding_completed_at=person_data.get("onboarding_completed_at"),
+                last_login=person_data.get("last_login"),
+                timezone=person_data.get("timezone", "America/New_York"),
+                notification_enabled=person_data.get("notification_enabled", True)
+            )
+            people[person.id] = person
+
+        return people
+
+    def _load_departments(self) -> dict:
+        """Load departments from JSON"""
+        file_path = self.data_dir / "departments.json"
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+
+        departments = {}
+        for dept_data in data.get("departments", []):
+            dept = Department(
+                id=dept_data["id"],
+                name=dept_data["name"],
+                head_id=dept_data["head_id"],
+                primary_company_goal_ids=dept_data.get("primary_company_goal_ids", []),
+                secondary_company_goal_ids=dept_data.get("secondary_company_goal_ids", []),
+                reports_to=dept_data.get("reports_to")
+            )
+            departments[dept.id] = dept
+
+        return departments
 
     def _load_company_goals(self) -> List[CompanyWhyGO]:
         """Load company WhyGOs from JSON"""
@@ -265,6 +320,71 @@ class JsonWhygoRepository(IWhygoRepository):
 
         return False
 
+    # Person/User methods
+    def get_person(self, person_id: str) -> Optional[Person]:
+        """Get a person by ID"""
+        return self._people.get(person_id)
+
+    def get_person_by_email(self, email: str) -> Optional[Person]:
+        """Get a person by email address"""
+        if not email:
+            return None
+        for person in self._people.values():
+            if person.email and person.email.lower() == email.lower():
+                return person
+        return None
+
+    def get_all_people(self) -> List[Person]:
+        """Get all people/employees"""
+        return list(self._people.values())
+
+    def get_people_by_department(self, dept_id: str) -> List[Person]:
+        """Get all people in a specific department"""
+        return [p for p in self._people.values() if p.department_id == dept_id]
+
+    def update_person(self, person: Person) -> bool:
+        """Update a person's information"""
+        if person.id not in self._people:
+            return False
+        self._people[person.id] = person
+        return True
+
+    # Department methods
+    def get_department(self, dept_id: str) -> Optional[Department]:
+        """Get a department by ID"""
+        return self._departments.get(dept_id)
+
+    def get_all_departments(self) -> List[Department]:
+        """Get all departments"""
+        return list(self._departments.values())
+
+    # Goal creation/update methods
+    def create_individual_goal(self, goal: IndividualWhyGO) -> bool:
+        """Create a new individual goal"""
+        if goal.id in [g.id for g in self._individual_goals]:
+            return False
+        goal.created_at = datetime.now().isoformat()
+        goal.updated_at = goal.created_at
+        self._individual_goals.append(goal)
+        return True
+
+    def update_individual_goal(self, goal: IndividualWhyGO) -> bool:
+        """Update an existing individual goal"""
+        for idx, existing_goal in enumerate(self._individual_goals):
+            if existing_goal.id == goal.id:
+                goal.updated_at = datetime.now().isoformat()
+                self._individual_goals[idx] = goal
+                return True
+        return False
+
+    def get_goals_by_status(self, status: str) -> dict:
+        """Get goals filtered by status"""
+        return {
+            'company': [g for g in self._company_goals if g.status == status],
+            'department': [g for g in self._department_goals if g.status == status],
+            'individual': [g for g in self._individual_goals if g.status == status]
+        }
+
     def save_all(self) -> bool:
         """Write all data back to JSON files"""
         try:
@@ -300,6 +420,17 @@ class JsonWhygoRepository(IWhygoRepository):
 
             with open(indiv_file, 'w') as f:
                 json.dump(indiv_data, f, indent=2)
+
+            # Save employees
+            employees_file = self.data_dir / "employees.json"
+            with open(employees_file, 'r') as f:
+                employees_data = json.load(f)
+
+            employees_data["employees"] = [person_to_dict(p) for p in self._people.values()]
+            employees_data["metadata"]["last_updated"] = datetime.now().isoformat()
+
+            with open(employees_file, 'w') as f:
+                json.dump(employees_data, f, indent=2)
 
             return True
         except Exception as e:
