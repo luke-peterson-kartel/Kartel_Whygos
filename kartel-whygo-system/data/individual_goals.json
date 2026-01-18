@@ -2,7 +2,7 @@
   "metadata": {
     "version": "1.0",
     "fiscal_year": 2026,
-    "last_updated": "2026-01-17T17:17:41.340404",
+    "last_updated": "2026-01-17T20:24:52.532743",
     "source": "Imported from markdown files"
   },
   "individual_goals": [
@@ -131,6 +131,193 @@
       "person_id": "person_wayan_palmieri",
       "parent_goal_ids": [],
       "approved_by": null
+    },
+    {
+      "id": "ig_ben_kusin_1",
+      "level": "individual",
+      "why": "Test goal to validate the onboarding system works correctly end-to-end",
+      "goal": "Successfully complete the onboarding flow and create my first WhyGO",
+      "status": "pending_approval",
+      "fiscal_year": 2026,
+      "outcomes": [],
+      "person_id": "person_ben_kusin",
+      "parent_goal_ids": [
+        "dg_sales_1"
+      ],
+      "approved_by": null,
+      "created_at": "2026-01-17T20:21:58.930104",
+      "updated_at": "2026-01-17T20:21:58.930104"
+    },
+    {
+      "id": "ig_ben_kusin_2",
+      "level": "individual",
+      "why": "Test goal to validate the onboarding system works correctly end-to-end",
+      "goal": "Successfully complete the onboarding flow and create my first WhyGO",
+      "status": "pending_approval",
+      "fiscal_year": 2026,
+      "outcomes": [
+        {
+          "id": "ig_ben_kusin_2_o1",
+          "goal_id": "ig_ben_kusin_2",
+          "description": "Complete all onboarding steps",
+          "metric_type": "boolean",
+          "owner_id": "person_ben_kusin",
+          "target_annual": 1.0,
+          "target_q1": null,
+          "target_q2": null,
+          "target_q3": null,
+          "target_q4": null,
+          "actual_q1": null,
+          "actual_q2": null,
+          "actual_q3": null,
+          "actual_q4": null,
+          "status_q1": null,
+          "status_q2": null,
+          "status_q3": null,
+          "status_q4": null
+        },
+        {
+          "id": "ig_ben_kusin_2_o2",
+          "goal_id": "ig_ben_kusin_2",
+          "description": "Create first individual goal",
+          "metric_type": "number",
+          "owner_id": "person_ben_kusin",
+          "target_annual": 1.0,
+          "target_q1": null,
+          "target_q2": null,
+          "target_q3": null,
+          "target_q4": null,
+          "actual_q1": null,
+          "actual_q2": null,
+          "actual_q3": null,
+          "actual_q4": null,
+          "status_q1": null,
+          "status_q2": null,
+          "status_q3": null,
+          "status_q4": null
+        }
+      ],
+      "person_id": "person_ben_kusin",
+      "parent_goal_ids": [
+        "dg_sales_1"
+      ],
+      "approved_by": null,
+      "created_at": "2026-01-17T20:23:40.479545",
+      "updated_at": "2026-01-17T20:23:40.479545"
+    },
+    {
+      "id": "ig_ben_kusin_3",
+      "level": "individual",
+      "why": "Test",
+      "goal": "Test goal",
+      "status": "pending_approval",
+      "fiscal_year": 2026,
+      "outcomes": [
+        {
+          "id": "ig_ben_kusin_3_o1",
+          "goal_id": "ig_ben_kusin_3",
+          "description": "Test 1",
+          "metric_type": "number",
+          "owner_id": "person_ben_kusin",
+          "target_annual": 100.0,
+          "target_q1": null,
+          "target_q2": null,
+          "target_q3": null,
+          "target_q4": null,
+          "actual_q1": null,
+          "actual_q2": null,
+          "actual_q3": null,
+          "actual_q4": null,
+          "status_q1": null,
+          "status_q2": null,
+          "status_q3": null,
+          "status_q4": null
+        },
+        {
+          "id": "ig_ben_kusin_3_o2",
+          "goal_id": "ig_ben_kusin_3",
+          "description": "Test 2",
+          "metric_type": "number",
+          "owner_id": "person_ben_kusin",
+          "target_annual": 50.0,
+          "target_q1": null,
+          "target_q2": null,
+          "target_q3": null,
+          "target_q4": null,
+          "actual_q1": null,
+          "actual_q2": null,
+          "actual_q3": null,
+          "actual_q4": null,
+          "status_q1": null,
+          "status_q2": null,
+          "status_q3": null,
+          "status_q4": null
+        }
+      ],
+      "person_id": "person_ben_kusin",
+      "parent_goal_ids": [
+        "dg_sales_1"
+      ],
+      "approved_by": null,
+      "created_at": "2026-01-17T20:23:47.645740",
+      "updated_at": "2026-01-17T20:23:47.645740"
+    },
+    {
+      "id": "ig_fill_isgro_1",
+      "level": "individual",
+      "why": "Testing the onboarding flow to ensure it works correctly for all team members",
+      "goal": "Successfully test and validate the WhyGO onboarding system",
+      "status": "pending_approval",
+      "fiscal_year": 2026,
+      "outcomes": [
+        {
+          "id": "ig_fill_isgro_1_o1",
+          "goal_id": "ig_fill_isgro_1",
+          "description": "Complete onboarding without errors",
+          "metric_type": "boolean",
+          "owner_id": "person_fill_isgro",
+          "target_annual": 1.0,
+          "target_q1": null,
+          "target_q2": null,
+          "target_q3": null,
+          "target_q4": null,
+          "actual_q1": null,
+          "actual_q2": null,
+          "actual_q3": null,
+          "actual_q4": null,
+          "status_q1": null,
+          "status_q2": null,
+          "status_q3": null,
+          "status_q4": null
+        },
+        {
+          "id": "ig_fill_isgro_1_o2",
+          "goal_id": "ig_fill_isgro_1",
+          "description": "Create first individual goal",
+          "metric_type": "number",
+          "owner_id": "person_fill_isgro",
+          "target_annual": 1.0,
+          "target_q1": null,
+          "target_q2": null,
+          "target_q3": null,
+          "target_q4": null,
+          "actual_q1": null,
+          "actual_q2": null,
+          "actual_q3": null,
+          "actual_q4": null,
+          "status_q1": null,
+          "status_q2": null,
+          "status_q3": null,
+          "status_q4": null
+        }
+      ],
+      "person_id": "person_fill_isgro",
+      "parent_goal_ids": [
+        "dg_generative_1"
+      ],
+      "approved_by": null,
+      "created_at": "2026-01-17T20:24:52.531009",
+      "updated_at": "2026-01-17T20:24:52.531009"
     }
   ]
 }

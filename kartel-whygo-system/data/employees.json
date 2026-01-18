@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2026-01-17T18:44:53.996450",
+    "last_updated": "2026-01-17T20:24:52.533164",
     "source": "EMPLOYEE_REFERENCE.md"
   },
   "employees": [
@@ -49,10 +49,10 @@
       "employment_type": "w2",
       "status": "active",
       "email": "ben.kusin@kartelai.com",
-      "onboarding_status": "not_started",
-      "onboarding_started_at": null,
+      "onboarding_status": "in_progress",
+      "onboarding_started_at": "2026-01-17T20:00:57.298655",
       "onboarding_completed_at": null,
-      "last_login": null,
+      "last_login": "2026-01-17T20:24:32.499258",
       "timezone": "America/New_York",
       "notification_enabled": true
     },
@@ -86,7 +86,7 @@
       "onboarding_status": "not_started",
       "onboarding_started_at": null,
       "onboarding_completed_at": null,
-      "last_login": null,
+      "last_login": "2026-01-17T20:24:52.501650",
       "timezone": "America/New_York",
       "notification_enabled": true
     },
