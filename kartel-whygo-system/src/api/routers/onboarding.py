@@ -62,14 +62,36 @@ def get_onboarding_context(
             reports_to=d.reports_to
         )
 
+    def to_float(value):
+        """Convert value to float, handling strings like '1,000' or 'Baseline'"""
+        if value is None:
+            return None
+        if isinstance(value, (int, float)):
+            return float(value)
+        if isinstance(value, str):
+            # Handle special cases like "Baseline"
+            if value.lower() in ['baseline', 'n/a', 'tbd', '']:
+                return None
+            # Remove commas and convert
+            try:
+                return float(value.replace(',', ''))
+            except ValueError:
+                return None
+        return None
+
     def outcome_to_response(o):
         return OutcomeResponse(
             id=o.id, goal_id=o.goal_id, description=o.description,
             metric_type=o.metric_type, owner_id=o.owner_id,
-            target_annual=o.target_annual, target_q1=o.target_q1,
-            target_q2=o.target_q2, target_q3=o.target_q3, target_q4=o.target_q4,
-            actual_q1=o.actual_q1, actual_q2=o.actual_q2,
-            actual_q3=o.actual_q3, actual_q4=o.actual_q4,
+            target_annual=to_float(o.target_annual),
+            target_q1=to_float(o.target_q1),
+            target_q2=to_float(o.target_q2),
+            target_q3=to_float(o.target_q3),
+            target_q4=to_float(o.target_q4),
+            actual_q1=to_float(o.actual_q1),
+            actual_q2=to_float(o.actual_q2),
+            actual_q3=to_float(o.actual_q3),
+            actual_q4=to_float(o.actual_q4),
             status_q1=o.status_q1, status_q2=o.status_q2,
             status_q3=o.status_q3, status_q4=o.status_q4
         )
