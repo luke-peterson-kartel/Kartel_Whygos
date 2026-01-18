@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-01-17T16:50:18.525704",
+    "source": "DATA_STRUCTURES.md"
+  },
+  "departments": [
+    {
+      "id": "dept_sales",
+      "name": "Sales",
+      "head_id": "person_ben_kusin",
+      "primary_company_goal_ids": [
+        "cg_1_pmf"
+      ],
+      "secondary_company_goal_ids": [
+        "cg_2_ops"
+      ],
+      "reports_to": "person_kevin_reilly"
+    },
+    {
+      "id": "dept_production",
+      "name": "Production",
+      "head_id": "person_wayan_palmieri",
+      "primary_company_goal_ids": [
+        "cg_2_ops"
+      ],
+      "secondary_company_goal_ids": [
+        "cg_1_pmf"
+      ],
+      "reports_to": "person_luke_peterson"
+    },
+    {
+      "id": "dept_generative",
+      "name": "Generative Engineering",
+      "head_id": "person_fill_isgro",
+      "primary_company_goal_ids": [
+        "cg_2_ops"
+      ],
+      "secondary_company_goal_ids": [
+        "cg_3_talent",
+        "cg_4_platform"
+      ],
+      "reports_to": "person_luke_peterson"
+    },
+    {
+      "id": "dept_community",
+      "name": "Community & Partnerships",
+      "head_id": "person_daniel_kalotov",
+      "primary_company_goal_ids": [
+        "cg_3_talent"
+      ],
+      "secondary_company_goal_ids": [
+        "cg_1_pmf"
+      ],
+      "reports_to": "person_luke_peterson"
+    },
+    {
+      "id": "dept_platform",
+      "name": "Platform Engineering",
+      "head_id": "person_niels_hoffmann",
+      "primary_company_goal_ids": [
+        "cg_4_platform"
+      ],
+      "secondary_company_goal_ids": [
+        "cg_2_ops"
+      ],
+      "reports_to": "person_luke_peterson"
+    }
+  ]
+}

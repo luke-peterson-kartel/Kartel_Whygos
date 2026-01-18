@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-01-17T16:50:18.525704",
+    "source": "EMPLOYEE_REFERENCE.md"
+  },
+  "employees": [
+    {
+      "id": "person_kevin_reilly",
+      "name": "Kevin Reilly",
+      "title": "CEO",
+      "department_id": "dept_management",
+      "manager_id": null,
+      "level": "executive",
+      "employment_type": "w2",
+      "status": "active"
+    },
+    {
+      "id": "person_luke_peterson",
+      "name": "Luke Peterson",
+      "title": "President & Co-Founder",
+      "department_id": "dept_management",
+      "manager_id": null,
+      "level": "executive",
+      "employment_type": "w2",
+      "status": "active"
+    },
+    {
+      "id": "person_ben_kusin",
+      "name": "Ben Kusin",
+      "title": "CRO & Co-Founder",
+      "department_id": "dept_sales",
+      "manager_id": "person_kevin_reilly",
+      "level": "department_head",
+      "employment_type": "w2",
+      "status": "active"
+    },
+    {
+      "id": "person_wayan_palmieri",
+      "name": "Wayan Palmieri",
+      "title": "SVP, Head of Production",
+      "department_id": "dept_production",
+      "manager_id": "person_luke_peterson",
+      "level": "department_head",
+      "employment_type": "contractor",
+      "status": "active"
+    },
+    {
+      "id": "person_fill_isgro",
+      "name": "Fill Isgro",
+      "title": "SVP, Head of Generative Engineering",
+      "department_id": "dept_generative",
+      "manager_id": "person_luke_peterson",
+      "level": "department_head",
+      "employment_type": "w2",
+      "status": "active"
+    },
+    {
+      "id": "person_daniel_kalotov",
+      "name": "Daniel Kalotov",
+      "title": "SVP, Head of Community & Partnerships",
+      "department_id": "dept_community",
+      "manager_id": "person_luke_peterson",
+      "level": "department_head",
+      "employment_type": "w2",
+      "status": "active"
+    },
+    {
+      "id": "person_niels_hoffmann",
+      "name": "Niels Hoffmann",
+      "title": "CTO",
+      "department_id": "dept_platform",
+      "manager_id": "person_luke_peterson",
+      "level": "department_head",
+      "employment_type": "international",
+      "status": "active"
+    },
+    {
+      "id": "person_emmet_reilly",
+      "name": "Emmet Reilly",
+      "title": "Director of Customer Success",
+      "department_id": "dept_sales",
+      "manager_id": "person_ben_kusin",
+      "level": "manager",
+      "employment_type": "w2",
+      "status": "active"
+    },
+    {
+      "id": "person_veronica_diaz",
+      "name": "Veronica Diaz",
+      "title": "Production Manager",
+      "department_id": "dept_production",
+      "manager_id": "person_wayan_palmieri",
+      "level": "manager",
+      "employment_type": "trial",
+      "status": "trial"
+    },
+    {
+      "id": "person_estefania_guarderas",
+      "name": "Estefania Guarderas",
+      "title": "Producer",
+      "department_id": "dept_production",
+      "manager_id": "person_wayan_palmieri",
+      "level": "ic",
+      "employment_type": "w2",
+      "status": "active"
+    },
+    {
+      "id": "person_jason_goldwatch",
+      "name": "Jason Goldwatch",
+      "title": "Director",
+      "department_id": "dept_production",
+      "manager_id": "person_wayan_palmieri",
+      "level": "manager",
+      "employment_type": "contractor",
+      "status": "active"
+    },
+    {
+      "id": "person_noah_shields",
+      "name": "Noah Shields",
+      "title": "Associate Producer",
+      "department_id": "dept_production",
+      "manager_id": "person_veronica_diaz",
+      "level": "ic",
+      "employment_type": "w2",
+      "status": "active"
+    },
+    {
+      "id": "person_brandon_valedez",
+      "name": "Brandon Valedez",
+      "title": "Data Training / LoRA Models",
+      "department_id": "dept_generative",
+      "manager_id": "person_fill_isgro",
+      "level": "ic",
+      "employment_type": "trial",
+      "status": "trial"
+    },
+    {
+      "id": "person_sean_geisterfer",
+      "name": "Sean Geisterfer",
+      "title": "Data Engineering",
+      "department_id": "dept_generative",
+      "manager_id": "person_fill_isgro",
+      "level": "ic",
+      "employment_type": "trial",
+      "status": "trial"
+    },
+    {
+      "id": "person_trent_hunter",
+      "name": "Trent Hunter",
+      "title": "Workflow Engineer",
+      "department_id": "dept_generative",
+      "manager_id": "person_fill_isgro",
+      "level": "ic",
+      "employment_type": "trial",
+      "status": "trial"
+    },
+    {
+      "id": "person_elliot_quartz",
+      "name": "Elliot Quartz",
+      "title": "AI Generalist",
+      "department_id": "dept_generative",
+      "manager_id": "person_fill_isgro",
+      "level": "ic",
+      "employment_type": "trial",
+      "status": "trial"
+    },
+    {
+      "id": "person_marc_donhue",
+      "name": "Marc Donhue",
+      "title": "Preditor",
+      "department_id": "dept_generative",
+      "manager_id": "person_fill_isgro",
+      "level": "ic",
+      "employment_type": "trial",
+      "status": "trial"
+    },
+    {
+      "id": "person_ahmed_yakout",
+      "name": "Ahmed Yakout",
+      "title": "Workflow Engineer - Real Estate",
+      "department_id": "dept_generative",
+      "manager_id": "person_fill_isgro",
+      "level": "ic",
+      "employment_type": "trial",
+      "status": "trial"
+    },
+    {
+      "id": "person_matthias_thoemmes",
+      "name": "Matthias Thoemmes",
+      "title": "Full Stack Developer",
+      "department_id": "dept_platform",
+      "manager_id": "person_niels_hoffmann",
+      "level": "ic",
+      "employment_type": "international",
+      "status": "active"
+    },
+    {
+      "id": "person_lukas_motiejunas",
+      "name": "Lukas Motiejunas",
+      "title": "Full Stack Developer",
+      "department_id": "dept_platform",
+      "manager_id": "person_niels_hoffmann",
+      "level": "ic",
+      "employment_type": "international",
+      "status": "active"
+    },
+    {
+      "id": "person_zac_bagley",
+      "name": "Zac Bagley",
+      "title": "Backend Engineer",
+      "department_id": "dept_platform",
+      "manager_id": "person_niels_hoffmann",
+      "level": "ic",
+      "employment_type": "trial",
+      "status": "trial"
+    },
+    {
+      "id": "person_jerry_bellman",
+      "name": "Jerry Bellman",
+      "title": "CFO (Part-Time)",
+      "department_id": "dept_management",
+      "manager_id": "person_kevin_reilly",
+      "level": "executive",
+      "employment_type": "trial",
+      "status": "trial"
+    }
+  ]
+}

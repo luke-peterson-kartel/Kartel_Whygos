@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "fiscal_year": 2026,
+    "last_updated": "2026-01-17T17:17:41.340635",
+    "notes": "Progress tracking records"
+  },
+  "progress_updates": [
+    {
+      "id": "cg_1_o1_q1_update_20260117171732",
+      "outcome_id": "cg_1_o1",
+      "quarter": "Q1",
+      "actual_value": 5,
+      "status": "+",
+      "notes": "Signed 5 enterprise clients in Q1",
+      "blocker": null,
+      "recorded_by": "person_ben_kusin",
+      "recorded_at": "2026-01-17T17:17:32.898938"
+    },
+    {
+      "id": "cg_4_o3_q1_update_20260117171736",
+      "outcome_id": "cg_4_o3",
+      "quarter": "Q1",
+      "actual_value": "MVP",
+      "status": "+",
+      "notes": "Generative Platform MVP deployed on schedule",
+      "blocker": null,
+      "recorded_by": "person_niels",
+      "recorded_at": "2026-01-17T17:17:36.929168"
+    },
+    {
+      "id": "cg_2_o1_q1_update_20260117171741",
+      "outcome_id": "cg_2_o1",
+      "quarter": "Q1",
+      "actual_value": 35,
+      "status": "~",
+      "notes": null,
+      "blocker": "Workflow refinement taking longer than expected",
+      "recorded_by": "person_luke_peterson",
+      "recorded_at": "2026-01-17T17:17:41.338878"
+    }
+  ]
+}
