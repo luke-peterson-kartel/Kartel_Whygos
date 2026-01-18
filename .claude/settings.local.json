@@ -12,7 +12,27 @@
       "Bash(pip3 install:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd FastAPI REST API backend for onboarding interface\n\nImplemented complete FastAPI backend to support React/Next.js onboarding UI.\nThis enables team members to authenticate, view goals, and complete onboarding\nthrough a web interface instead of CLI tools.\n\nNew Features:\n- JWT-based authentication \\(email login, no password for MVP\\)\n- REST API with 7 endpoint categories \\(auth, users, onboarding, company, departments, individuals, outcomes\\)\n- Comprehensive onboarding context API returning all data needed for UI\n- Role-based access control \\(executive, department_head, manager, ic\\)\n- Input validation using Pydantic models\n\nArchitecture:\n- Extended Person model with onboarding fields \\(email, onboarding_status, last_login, timezone\\)\n- Created 3 new services: UserService, OnboardingService, ValidationService\n- Extended repository layer with person/user lookup and CRUD methods\n- Dependency injection for clean service instantiation\n- CORS middleware configured for frontend integration\n\nData Updates:\n- Added email addresses to all 22 employees \\(firstname.lastname@kartelai.com\\)\n- Added onboarding tracking fields \\(status, started_at, completed_at\\)\n- Extended employees.json save logic to persist onboarding data\n\nKey Files:\n- src/api/main.py - FastAPI application entry point\n- src/api/routers/* - 7 routers with authentication, goals, and onboarding endpoints\n- src/api/dependencies.py - Dependency injection and JWT authentication\n- src/models/api_models.py - Pydantic request/response models\n- API_README.md - Complete API documentation with examples\n- requirements.txt - FastAPI dependencies \\(fastapi, uvicorn, pydantic, python-jose\\)\n- run_api.sh - Script to start development server\n\nTesting:\n- API imports successfully without errors\n- Swagger UI auto-generated at /docs\n- All existing CLI functionality preserved and working\n\nReady for frontend development. Start server with: ./run_api.sh\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git config:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(curl:*)",
+      "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwZXJzb25fYmVuX2t1c2luIiwiZW1haWwiOiJiZW4ua3VzaW5Aa2FydGVsYWkuY29tIiwibGV2ZWwiOiJkZXBhcnRtZW50X2hlYWQiLCJleHAiOjE3NjkzMDk1OTl9.VgiDtpc2xK1WYdjCZdu7vCzvsPM9NBd_2TqAJAgRf3A\")",
+      "Bash(__NEW_LINE_0c662c99151a6bea__ curl -s 'http://127.0.0.1:8000/api/users/me' -H \"Authorization: Bearer $TOKEN\")",
+      "Bash(pkill:*)",
+      "Bash(npx create-next-app@latest whygo-onboarding --typescript --tailwind --app --eslint --no-src-dir --import-alias \"@/*\")",
+      "Bash(node --version)",
+      "Bash(npm:*)",
+      "Bash(brew install:*)",
+      "Bash(/usr/local/bin/node:*)",
+      "Bash(/opt/homebrew/bin/node:*)",
+      "Bash(~/.nvm/versions/node/*/bin/node)",
+      "Bash(/usr/local/bin/npm --version)",
+      "Bash(/usr/local/bin/npx --version)",
+      "Bash(/usr/local/bin/npx create-next-app@latest whygo-onboarding --typescript --tailwind --app --eslint --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(/usr/local/bin/npx shadcn@latest init --yes --defaults)",
+      "Bash(/usr/local/bin/npx shadcn@latest add button card input label select textarea badge progress separator --yes --overwrite)",
+      "Bash(./run_api.sh)",
+      "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwZXJzb25fYmVuX2t1c2luIiwiZW1haWwiOiJiZW4ua3VzaW5Aa2FydGVsYWkuY29tIiwibGV2ZWwiOiJkZXBhcnRtZW50X2hlYWQiLCJleHAiOjE3NjkzMTM1MzV9.rPPbPlJZaCxYtPIHBupEZLtIbE5pg0MnKzMbk95LnSA\")",
+      "Bash(find:*)",
+      "Bash(lsof:*)"
     ]
   }
 }
