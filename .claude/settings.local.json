@@ -32,7 +32,8 @@
       "Bash(./run_api.sh)",
       "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwZXJzb25fYmVuX2t1c2luIiwiZW1haWwiOiJiZW4ua3VzaW5Aa2FydGVsYWkuY29tIiwibGV2ZWwiOiJkZXBhcnRtZW50X2hlYWQiLCJleHAiOjE3NjkzMTM1MzV9.rPPbPlJZaCxYtPIHBupEZLtIbE5pg0MnKzMbk95LnSA\")",
       "Bash(find:*)",
-      "Bash(lsof:*)"
+      "Bash(lsof:*)",
+      "Bash(tree:*)"
     ]
   }
 }

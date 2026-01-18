@@ -10,7 +10,7 @@ This is an agentic system for managing Kartel AI's 2026 WhyGO goals. It helps te
 
 ## Key Knowledge Files
 
-Before responding to any goal-related request, read the relevant knowledge files:
+Before responding to any goal-related request, read the relevant knowledge files from the root `knowledge/` directory:
 
 | File | When to Read |
 |------|--------------|
@@ -19,6 +19,8 @@ Before responding to any goal-related request, read the relevant knowledge files
 | `knowledge/EMPLOYEE_REFERENCE.md` | When identifying users, their managers, or departments |
 | `knowledge/DATA_STRUCTURES.md` | When building features or working with data |
 | `knowledge/COACHING_INSTRUCTIONS.md` | When guiding users through goal-setting |
+
+**Note**: Knowledge files are centralized in the root `knowledge/` directory for easy access across both frontend and backend.
 
 ---
 
@@ -165,10 +167,12 @@ When users want to update progress:
 | Data Type | Location |
 |-----------|----------|
 | Company WhyGOs (source of truth) | `knowledge/COMPANY_WHYGOS.md` |
-| Department WhyGOs | `data/department_goals.json` |
-| Individual WhyGOs | `data/individual_goals.json` |
-| Progress updates | `data/progress_updates.json` |
+| Department WhyGOs | `kartel-whygo-system/data/department_goals.json` |
+| Individual WhyGOs | `kartel-whygo-system/data/individual_goals.json` |
+| Progress updates | `kartel-whygo-system/data/progress_updates.json` |
 | Employee list | `knowledge/EMPLOYEE_REFERENCE.md` |
+| Employee data (JSON) | `kartel-whygo-system/data/employees.json` |
+| Archive sources | `archive/markdown-sources/` |
 
 ---
 

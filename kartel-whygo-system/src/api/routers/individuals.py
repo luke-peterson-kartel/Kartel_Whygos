@@ -39,10 +39,9 @@ def get_my_goals(
     person_id = current_user['person'].id
     goals = whygo_service.repo.get_individual_goals_by_person(person_id)
 
-    # Return full goal details with outcomes
+    # Return full goal details with outcomes (outcomes are already embedded in goal object)
     result = []
     for g in goals:
-        outcomes = whygo_service.repo.get_outcomes_by_goal(g.id)
         result.append({
             "id": g.id,
             "person_id": g.person_id,
@@ -73,7 +72,7 @@ def get_my_goals(
                     "status_q3": o.status_q3,
                     "status_q4": o.status_q4
                 }
-                for o in outcomes
+                for o in g.outcomes
             ],
             "created_at": g.created_at,
             "updated_at": g.updated_at

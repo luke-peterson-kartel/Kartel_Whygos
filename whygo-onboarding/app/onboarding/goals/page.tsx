@@ -41,18 +41,26 @@ export default function GoalsPage() {
 
   useEffect(() => {
     setCurrentStep(4)
-    if (data) {
-      // Pre-fill owner_id with current user
-      setFormData(prev => ({
-        ...prev,
-        outcomes: prev.outcomes.map(o => ({ ...o, owner_id: data.person.id }))
-      }))
+
+    // Redirect if no data
+    if (!data) {
+      router.push('/onboarding/profile')
+      return
     }
-  }, [data])
+
+    // Pre-fill owner_id with current user
+    setFormData(prev => ({
+      ...prev,
+      outcomes: prev.outcomes.map(o => ({ ...o, owner_id: data.person.id }))
+    }))
+  }, [data, router])
 
   if (!data) {
-    router.push('/onboarding/profile')
-    return null
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      </div>
+    )
   }
 
   const handleSubmit = async (e: React.FormEvent) => {

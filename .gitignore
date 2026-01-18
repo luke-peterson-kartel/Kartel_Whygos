@@ -44,3 +44,13 @@ htmlcov/
 # Local development
 .env
 .env.local
+
+# Next.js
+.next/
+out/
+node_modules/
+.vercel
+*.tsbuildinfo
+
+# Claude Code
+.claude/
