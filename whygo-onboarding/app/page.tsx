@@ -57,7 +57,7 @@ export default function LoginPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="your.name@kartelai.com"
+                placeholder="your.name@kartel.ai"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
