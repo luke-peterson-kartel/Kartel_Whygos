@@ -7,12 +7,26 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const { login } = useAuth()
+
+  const handleQuickLogin = async () => {
+    setIsLoading(true)
+    try {
+      await login('fill.isgro@kartel.ai')
+      // Force navigation to dashboard instead of profile
+      window.location.href = '/dashboard'
+    } catch (err: any) {
+      setError(err.message || 'Login failed')
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -77,6 +91,18 @@ export default function LoginPage() {
           </CardFooter>
         </form>
         </Card>
+
+        {/* DEBUG: Quick login and dashboard */}
+        <div className="text-center">
+          <Button
+            onClick={handleQuickLogin}
+            variant="outline"
+            disabled={isLoading}
+            className="w-full"
+          >
+            🚀 Quick Test: Login as Fill & Go to Dashboard
+          </Button>
+        </div>
       </div>
     </div>
   )

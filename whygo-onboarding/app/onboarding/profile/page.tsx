@@ -23,6 +23,14 @@ export default function ProfilePage() {
 
   const loadData = async () => {
     try {
+      // Check if user is authenticated
+      const token = localStorage.getItem('auth_token')
+      if (!token) {
+        console.log('No auth token found, redirecting to login')
+        router.push('/')
+        return
+      }
+
       const data = await getOnboardingContext()
       setContext(data)
       setData(data)
@@ -38,6 +46,10 @@ export default function ProfilePage() {
       }
     } catch (error) {
       console.error('Failed to load onboarding context:', error)
+      // If authentication fails, redirect to login
+      if (error instanceof Error && error.message.includes('authentication')) {
+        router.push('/')
+      }
     } finally {
       setIsLoading(false)
     }
@@ -55,13 +67,15 @@ export default function ProfilePage() {
     )
   }
 
-  if (!context) {
+  if (!context || !context.person || !context.department) {
     return (
-      <Card>
-        <CardContent className="pt-6">
-          <p className="text-red-600">Failed to load profile data</p>
-        </CardContent>
-      </Card>
+      <div className="max-w-2xl mx-auto space-y-6">
+        <Card>
+          <CardContent className="pt-6">
+            <p className="text-red-600">Failed to load profile data. Redirecting to login...</p>
+          </CardContent>
+        </Card>
+      </div>
     )
   }
 

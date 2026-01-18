@@ -42,8 +42,16 @@ export function MyGoalsContainer({ onCreateGoal }: MyGoalsContainerProps) {
   ) : undefined
 
   return (
-    <DashboardCard title="Your Goals" action={action}>
-      <GoalList goals={goals || []} />
-    </DashboardCard>
+    <>
+      <div className="mb-4">
+        <h2 className="text-2xl font-bold text-gray-900">Your Goals</h2>
+        <p className="text-sm text-gray-600 mt-1">
+          Track your individual WhyGOs ({goals?.length || 0}/3)
+        </p>
+      </div>
+      <DashboardCard title="" action={action}>
+        <GoalList goals={goals || []} />
+      </DashboardCard>
+    </>
   )
 }
